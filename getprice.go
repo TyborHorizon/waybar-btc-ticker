@@ -24,7 +24,7 @@ func coinMarketRequest(apiKey string) {
 		log.Fatalf("request-error: %v", err)
 	}
 	req.Header.Set("Accepts", "application/json")
-	req.Header.Set("X-CMC-PRO-API-KEY", apiKey)
+	req.Header.Set("X-CMC_PRO_API_KEY", apiKey)
 
 	client := &http.Client{}
 	resp, err := client.Do(req)
@@ -51,5 +51,5 @@ func coinMarketRequest(apiKey string) {
 	}
 
 	price := result.Data["BTC"].Quote["USD"].Price
-	fmt.Printf("%.2f/n", price)
+	fmt.Printf("%.2f\n", price)
 }
