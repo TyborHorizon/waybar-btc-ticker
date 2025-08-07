@@ -2,11 +2,13 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
 	"io"
 	"log"
 	"net/http"
 	"os"
+
+	"golang.org/x/text/language"
+	"golang.org/x/text/message"
 )
 
 func main() {
@@ -51,5 +53,7 @@ func coinMarketRequest(apiKey string) {
 	}
 
 	price := result.Data["BTC"].Quote["USD"].Price
-	fmt.Printf("%.2f\n", price)
+
+	p := message.NewPrinter(language.English)
+	p.Printf("%.2f\n", price)
 }
