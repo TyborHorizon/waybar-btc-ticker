@@ -33,7 +33,7 @@ Either export it manually:
 export COINMARKETCAP_API_KEY=your_api_key
 ```
 
-or export it in your ```bash .profile``` or ```bash .zprofile```
+or export it in your ```.profile``` or ```.zprofile```
 
 for hyprland edit your hyprland.conf
 ```bash
