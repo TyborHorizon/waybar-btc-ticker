@@ -33,22 +33,11 @@ Either export it manually:
 export COINMARKETCAP_API_KEY=your_api_key
 ```
 
-Or use `.env` / `.envrc` with [direnv](https://direnv.net/)
+or export it in your ```bash .profile``` or ```bash .zprofile```
 
-### `.env`
-```env
-COINMARKETCAP_API_KEY=your_api_key
-```
-
-### `.envrc`
+for hyprland edit your hyprland.conf
 ```bash
-dotenv 
-```
-
-then allow it once:
-
-```bash
-direnv allow
+exec-once = env COINMARKETCAP_API_KEY=XXX-XXX-XXX-XXX waybar
 ```
 
 ---
@@ -73,17 +62,6 @@ optional css:
   color: #f7931a;
   padding: 0 6px;
 }
-```
-
----
-
-## .gitignore
-
-dont leak your env
-
-```gitignore
-.env
-.envrc
 ```
 
 ---
